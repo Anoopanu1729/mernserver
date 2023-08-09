@@ -2,12 +2,12 @@ const express = require('express')
 const router = express.Router()
 const cors = require('cors')
 const { test, registerUser,loginUser, } = require('../Controllers/logic')
-
+const FRONT_URL=process.env.FRONT_URL
 
 router.use(
     cors({
         credentials: true,
-        origin: 'http://localhost:5173'
+        origin: `${FRONT_URL}`
     })
 )
 
